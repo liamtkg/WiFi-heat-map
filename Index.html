@@ -1,1 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>WiFi Heat Map</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<h1>WiFi Heat Map</h1>
+
+<div class="panel">
+
+<label>
+Upload floor plan:
+</label>
+
+<input type="file" id="floorUpload" accept="image/*">
+
+<p>
+Tap your location on the map and select signal strength.
+</p>
+
+</div>
+
+
+<canvas id="mapCanvas"></canvas>
+
+
+<div class="controls">
+
+<button onclick="addReading('excellent')">
+🟢 Excellent
+</button>
+
+<button onclick="addReading('good')">
+🟡 Good
+</button>
+
+<button onclick="addReading('weak')">
+🟠 Weak
+</button>
+
+<button onclick="addReading('poor')">
+🔴 Poor
+</button>
+
+</div>
+
+
+<button onclick="saveSurvey()">
+Save Survey
+</button>
+
+
+<button onclick="clearSurvey()">
+Clear
+</button>
+
+
+<script src="storage.js"></script>
+<script src="heatmap.js"></script>
+<script src="app.js"></script>
+
+
+</body>
+</html>
